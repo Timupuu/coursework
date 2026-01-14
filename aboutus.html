@@ -1,52 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Us</title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-   <nav style="background: green; border-radius: 10px;">
-  <ul style="list-style: none; margin: 0; padding: 10px; display: flex; gap: 1rem; justify-content: flex-end; color: white;">
-    <li><a href="./home.html" target="_blank"style="color: white; text-decoration: none;">Home</a></li>
-    <li><a href="./product.html" target="_blank"style="color: white; text-decoration: none;">Product</a></li>
-    <li><a href="./research.html" target="_blank"style="color: white; text-decoration: none;">Research</a></li>
-    <li style="position: relative;">
-      <a href="#" onclick="return false;" style="color: white; text-decoration: none;">More</a>
-      <ul style="display: none; position: absolute; left: 0; top: 100%; background: limegreen; border: 1px solid #ccc; border-radius: 10px; list-style: none; margin: 0; padding: 10px; min-width: 150px; max-width: 90vw; box-sizing: border-box;">
-  <li><a href="./blog.html" target="_blank"style="color: black; text-decoration: none; display: block; padding: 8px 16px;">Blog</a></li>
-  <li><a href="./aboutus.html" target="_blank"style="color: black; text-decoration: none; display: block; padding: 8px 16px;">About</a></li>
-  <li><a href="./contact.html" target="_blank"style="color: black; text-decoration: none; display: block; padding: 8px 16px;">Contact</a></li>
-</ul>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | EcoMart</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4fbf6;
+  color: #2e3d2f;
+}
+
+/* NAV */
+nav {
+  background: #2e7d32;
+  padding: 14px 24px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HEADER */
+.about-header {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #1b5e20, #4caf50);
+  color: white;
+}
+.about-header h1 {
+  font-size: 2.8rem;
+}
+.about-header p {
+  max-width: 750px;
+  margin: 15px auto 0;
+}
+
+/* TEAM */
+.team-section {
+  padding: 80px 30px;
+  text-align: center;
+}
+.team-section h2 {
+  font-size: 2.3rem;
+  margin-bottom: 45px;
+  color: #1b5e20;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.team-card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-card img {
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #66bb6a;
+  margin-bottom: 18px;
+}
+
+.team-card h3 {
+  color: #2e7d32;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 20px;
+  padding: 30px;
+  animation: pop 0.3s ease;
+  position: relative;
+}
+
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.modal-body img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.modal-body h2 {
+  color: #1b5e20;
+  margin-bottom: 10px;
+}
+
+.modal-body p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.cv-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #2e7d32;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  margin-top: 70px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
-    <script>
-  // Dropdown toggle with viewport adjustment
-  document.querySelectorAll('nav li').forEach(function(li) {
-    li.addEventListener('mouseenter', function() {
-      var dropdown = li.querySelector('ul');
-      if (dropdown) {
-        dropdown.style.display = 'block';
-        dropdown.style.left = '0';
-        dropdown.style.right = 'auto';
-        // Adjust position if cropped by the right edge
-        var rect = dropdown.getBoundingClientRect();
-        if (rect.right > window.innerWidth) {
-          dropdown.style.left = 'auto';
-          dropdown.style.right = '0';
-        }
-        // Adjust position if cropped by the left edge
-        if (rect.left < 0) {
-          dropdown.style.left = '0';
-          dropdown.style.right = 'auto';
-        }
-      }
-    });
-    li.addEventListener('mouseleave', function() {
-      var dropdown = li.querySelector('ul');
-      if (dropdown) dropdown.style.display = 'none';
-    });
-  });
-</script> 
+
+<section class="about-header">
+  <h1>About EcoMart</h1>
+  <p>EcoMart promotes sustainable e-commerce and responsible digital consumption.</p>
+</section>
+
+<section class="team-section">
+  <h2>Meet Our Team 🌿</h2>
+
+  <div class="team-grid">
+    <div class="team-card" onclick="openModal(1)">
+      <img src="../images/user1.png">
+      <h3>Arjan Timalsina</h3>
+    </div>
+
+    <div class="team-card" onclick="openModal(2)">
+      <img src="../images/user2.png">
+      <h3>Shuvam</h3>
+    </div>
+
+    <div class="team-card" onclick="openModal(3)">
+      <img src="../images/user3.png">
+      <h3>Purushottam Sapkota</h3>
+    </div>
+
+    <div class="team-card" onclick="openModal(4)">
+      <img src="../images/user4.png">
+      <h3>Riwaz Thapa</h3>
+    </div>
+
+    <div class="team-card" onclick="openModal(5)">
+      <img src="../images/user5.png">
+      <h3>Aarju Dahal</h3>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <div class="modal-body">
+      <img id="modalImg">
+      <div>
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <a id="modalCV" class="cv-btn" target="_blank">View CV</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 EcoMart | Growing a greener future 🌱
+</footer>
+
+<script>
+const data = {
+  1: {
+    name: "Arjan Timalsina",
+    img: "../images/user1.png",
+    desc: "Project lead responsible for planning, coordination, and sustainability goals.",
+    cv: "../images/cv1.pdf"
+  },
+  2: {
+    name: "Shuvam",
+    img: "../images/user2.png",
+    desc: "Frontend developer focused on UI, responsiveness, and accessibility.",
+    cv: "../images/cv2.pdf"
+  },
+  3: {
+    name: "Purushottam Sapkota",
+    img: "../images/user3.png",
+    desc: "Backend developer managing databases, APIs, and system performance.",
+    cv: "../images/cv3.pdf"
+  },
+  4: {
+    name: "Riwaz Thapa",
+    img: "../images/user4.png",
+    desc: "UI/UX designer ensuring visual consistency and user-friendly layouts.",
+    cv: "../images/cv4.pdf"
+  },
+  5: {
+    name: "Aarju Dahal",
+    img: "../images/user5.png",
+    desc: "Research analyst evaluating sustainability and content accuracy.",
+    cv: "../images/cv5.pdf"
+  }
+};
+
+function openModal(id) {
+  document.getElementById("modal").classList.add("show");
+  document.getElementById("modalImg").src = data[id].img;
+  document.getElementById("modalName").textContent = data[id].name;
+  document.getElementById("modalDesc").textContent = data[id].desc;
+  document.getElementById("modalCV").href = data[id].cv;
+}
+
+function closeModal() {
+  document.getElementById("modal").classList.remove("show");
+}
+
+document.getElementById("modal").addEventListener("click", e => {
+  if (e.target.id === "modal") closeModal();
+});
+</script>
+
 </body>
 </html>
