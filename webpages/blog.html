@@ -7,8 +7,43 @@
     <link href="css/style.css" rel="stylesheet">
  <link rel="icon" type="image/png" href="../images/slogo.png">
 
+ <style>
+    header {
+        background-color: #e0ffe0;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    header .title h1 {
+        margin: 0;
+        color: #2e7d32;
+    }
+    header .title h2 {
+        margin: 5px;
+        color: #388e3c;
+    }
+    .blog {
+        background-color: #f0fff0;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .blog h2 {
+        color: #2e7d32;
+    }
+    .blog p {
+        color: #4f4f4f;
+    }
+    .blog-pic {
+        text-align: center;
+        margin: 20px;
+    }
+    </style>
   </head>
   <body>
+  
  <nav style="background: #80ef80; border-radius: 10px; height: 80px; display: flex; align-items: flex-end; justify-content: flex-end;">
   <a href="../index.html"> 
   <img src="../images/logo-nobackground.png" alt="Logo" style="height: 200px; width: 200px; position: absolute; left: 25px; top: -53px;">
@@ -53,7 +88,26 @@
       if (dropdown) dropdown.style.display = 'none';
     });
   });
-</script>  
+</script> 
+<header>
+        <div class="title">
+            <h1>Technology & Sustainability</h1>
+            <h2>The two-way Relationship between Tech and Sustainability</h2>
+        </div>
+    </header>
+
+    <div class="blog">
+      <h2>Technology for Sustainability</h2>
+      <p>Technology strongly supports sustainability by shaping eco-friendly lifestyles and responsible choices. For a
+        sustainability-focused store like EcoMart, technology plays a key role in raising environmental awareness, promoting
+        green products, and encouraging sustainable living.</p>
+    </div>
+    <div class="blog-pic">
+      <img src="../images/blogpic1.jpg" alt="Technology for Sustainability">
+    </div>
+
+
+
 <footer style="background: #80ef80; border-radius: 10px; color: black; display: flex; justify-content: space-between; align-items: flex-start; padding: 20px; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 100;">
   <a href="../index.html"> 
   <img src="../images/logo-nobackground.png" alt="Logo" style="height: 300px; width: 300px; position: absolute; right: 35px; bottom: -35px;">
