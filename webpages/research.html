@@ -54,43 +54,92 @@
       if (dropdown) dropdown.style.display = 'none';
     });
   });
-</script> 
+</script>
+    <style>
+    .blog-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #b8f0b8;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.blog-post.reverse {
+  flex-direction: row-reverse;
+}
+
+.blog {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.blog-post.reverse .blog {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.blog h2 {
+  margin: 0;
+  color: #2e7d32;
+}
+
+.blog p {
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+.blog-pic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-pic img {
+  max-width: 50%;
+  border-radius: 10px;
+}
+
+    </style>
  
-<article class="blog-post" style="display: flex; flex-direction: row; justify-content: space-between; background-color: #b8f0b8; margin: 5px; padding: 15px; border-radius: 10px;">
-      <div class="blog" style="flex: 1; margin-right: 10px;">
-        <h2 style="margin: 0; color: #2e7d32;">User Accessibility on AliExpress: Inspiration for EcoMart’s Website</h2>
-        <p style="text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size: medium;">
-          AliExpress, as one of the world’s largest online retail platforms, stands out for its commitment to user accessibility and inclusive design. The website’s interface is structured to accommodate a diverse global audience, featuring intuitive navigation, clear categorization, and robust search functionality. AliExpress also integrates accessibility features such as scalable text, keyboard navigation, and alternative text for images, ensuring that users with varying abilities can interact with the platform efficiently. The checkout process is streamlined, with multilingual support and multiple payment options, making online shopping accessible to people from different backgrounds and regions. Observing these thoughtful design choices inspired us to prioritize accessibility in the development of the EcoMart website. We recognized that a truly sustainable business must also be inclusive, enabling everyone—regardless of ability—to access eco-friendly products and information. By adopting similar accessibility standards, EcoMart aims to create a welcoming, user-friendly environment that empowers all visitors to make sustainable choices with ease.
-        </p>
-      </div>
-      <div class="blog-pic" style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <img src="../images/ali.png" alt="AliExpress Accessibility Inspiration" style="max-width: 50%; border-radius: 10px;">
-      </div>
-    </article>
-
-    <article class="blog-post" style="display: flex; flex-direction: row; justify-content: space-between; background-color: #b8f0b8; margin: 5px; padding: 15px; border-radius: 10px;">
-      <div class="blog" style="flex: 1; margin-right: 10px;">
-        <h2 style="margin: 0; color: #2e7d32;">EcoMart’s Color Palette: Drawing Inspiration from Sustainable Green Products</h2>
-        <p style="text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size: medium;">
-          The visual identity of EcoMart is deeply rooted in the symbolism and science of the color green, which is universally associated with sustainability, renewal, and environmental stewardship. Our website’s color palette is inspired by the natural hues found in sustainable products—such as recycled paper, organic textiles, and biodegradable packaging—which often feature earthy greens and subtle, calming tones. Research in color psychology indicates that green evokes feelings of balance, harmony, and growth, making it an ideal choice for brands committed to ecological responsibility. By incorporating various shades of green throughout our website, EcoMart not only reflects its dedication to environmental values but also creates a soothing and trustworthy atmosphere for users. This deliberate use of color serves as a visual reminder of our mission: to promote products and practices that support a healthier planet. The green palette is more than an aesthetic choice; it is a strategic element that reinforces our commitment to sustainability at every level of the user experience.
-        </p>
-      </div>
-      <div class="blog-pic" style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <img src="../images/eco.jpg" alt="EcoMart Green Color Palette" style="max-width: 50%; border-radius: 10px;">
-      </div>
-    </article>
-
-    <article class="blog-post" style="display: flex; flex-direction: row; justify-content: space-between; background-color: #b8f0b8; margin: 5px; padding: 15px; border-radius: 10px;">
-      <div class="blog" style="flex: 1; margin-right: 10px;">
-        <h2 style="margin: 0; color: #2e7d32;">Template Inspiration from Business Insider: A Research-Driven Approach</h2>
-        <p style="text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size: medium;">
-          In designing the EcoMart website, we conducted extensive research into leading digital media platforms to identify best practices in layout, readability, and user engagement. Business Insider emerged as a key source of inspiration due to its clean, modern template and effective use of visual hierarchy. The site’s modular structure, with clearly defined sections and ample white space, enhances content discoverability and reduces cognitive load for readers. Business Insider’s approach to typography—using legible fonts and consistent sizing—ensures that articles are easy to read across devices. Additionally, the strategic placement of images and interactive elements contributes to a dynamic yet uncluttered browsing experience. By analyzing these design principles, we adapted similar strategies for EcoMart, focusing on clarity, accessibility, and visual appeal. Our template emphasizes organized content blocks, intuitive navigation, and responsive design, all informed by the research-backed successes of platforms like Business Insider. This methodology ensures that EcoMart delivers both informative content and a seamless user experience.
-        </p>
-      </div>
-      <div class="blog-pic" style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <img src="../images/binsider.png" alt="Business Insider Template Inspiration" style="max-width: 50%; border-radius: 10px;">
-      </div>
-    </article>
+<article class="blog-post">
+  <div class="blog">
+    <h2>User Accessibility on AliExpress: Inspiration for EcoMart’s Website</h2>
+    <p>
+      AliExpress, as one of the world’s largest online retail platforms, stands out for its commitment to user accessibility and inclusive design. The website’s interface is structured to accommodate a diverse global audience, featuring intuitive navigation, clear categorization, and robust search functionality. AliExpress also integrates accessibility features such as scalable text, keyboard navigation, and alternative text for images, ensuring that users with varying abilities can interact with the platform efficiently. The checkout process is streamlined, with multilingual support and multiple payment options, making online shopping accessible to people from different backgrounds and regions. Observing these thoughtful design choices inspired us to prioritize accessibility in the development of the EcoMart website. We recognized that a truly sustainable business must also be inclusive, enabling everyone—regardless of ability—to access eco-friendly products and information. By adopting similar accessibility standards, EcoMart aims to create a welcoming, user-friendly environment that empowers all visitors to make sustainable choices with ease.
+    </p>
+  </div>
+  <div class="blog-pic">
+    <img src="../images/ali.png" alt="AliExpress Accessibility Inspiration">
+  </div>
+</article>
+<br><br>
+<article class="blog-post reverse">
+  <div class="blog">
+    <h2>EcoMart’s Color Palette: Drawing Inspiration from Sustainable Green Products</h2>
+    <p>
+      The visual identity of EcoMart is deeply rooted in the symbolism and science of the color green, which is universally associated with sustainability, renewal, and environmental stewardship. Our website’s color palette is inspired by the natural hues found in sustainable products—such as recycled paper, organic textiles, and biodegradable packaging—which often feature earthy greens and subtle, calming tones. Research in color psychology indicates that green evokes feelings of balance, harmony, and growth, making it an ideal choice for brands committed to ecological responsibility. By incorporating various shades of green throughout our website, EcoMart not only reflects its dedication to environmental values but also creates a soothing and trustworthy atmosphere for users. This deliberate use of color serves as a visual reminder of our mission: to promote products and practices that support a healthier planet. The green palette is more than an aesthetic choice; it is a strategic element that reinforces our commitment to sustainability at every level of the user experience.
+    </p>
+  </div>
+  <div class="blog-pic">
+    <img src="../images/eco.jpg" alt="EcoMart Green Color Palette">
+  </div>
+</article>
+<br><br>
+<article class="blog-post">
+  <div class="blog">
+    <h2>Template Inspiration from Business Insider: A Research-Driven Approach</h2>
+    <p>
+      In designing the EcoMart website, we conducted extensive research into leading digital media platforms to identify best practices in layout, readability, and user engagement. Business Insider emerged as a key source of inspiration due to its clean, modern template and effective use of visual hierarchy. The site’s modular structure, with clearly defined sections and ample white space, enhances content discoverability and reduces cognitive load for readers. Business Insider’s approach to typography—using legible fonts and consistent sizing—ensures that articles are easy to read across devices. Additionally, the strategic placement of images and interactive elements contributes to a dynamic yet uncluttered browsing experience. By analyzing these design principles, we adapted similar strategies for EcoMart, focusing on clarity, accessibility, and visual appeal. Our template emphasizes organized content blocks, intuitive navigation, and responsive design, all informed by the research-backed successes of platforms like Business Insider. This methodology ensures that EcoMart delivers both informative content and a seamless user experience.
+    </p>
+  </div>
+  <div class="blog-pic">
+    <img src="../images/binsider.png" alt="Business Insider Template Inspiration">
+  </div>
+</article>
 
 
 
