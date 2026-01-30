@@ -12,227 +12,280 @@
 
   </head>
   <body style="background-color: #adebb3;"> <!-- Sets background color for the page -->
-    <nav class="navbar">
-      <a href="index.html">
-        <img src="../images/logo-nobackground.png" alt="Logo" class="logo"> <!-- Website logo -->
-      </a>  
-      <ul class="nav-list"> <!-- Navigation links list -->
-        <li><a href="../index.html" class="nav-link">Home</a></li>
-        <li><a href="./product.html"class="nav-link">Product</a></li>
-        <li><a href="./research.html"class="nav-link">Research</a></li>
-        <li><a href="./blog.html" class="nav-link">Blog</a></li>
-        <li class="dropdown"> <!-- Dropdown menu for more links -->
-          <a href="#" onclick="return false;" class="nav-link">More</a>
-          <ul class="dropdown-menu">
-            <li><a href="./contact.html"  class="dropdown-link">Contact</a></li>
-            <li><a href="./aboutus.html"  class="dropdown-link">About</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+<nav class="navbar">
+    <a href="index.html">
+      <img src="../images/logo-nobackground.png" alt="Logo" class="logo"> <!-- Website logo -->
+    </a>  
+    <ul class="nav-list"> <!-- Navigation links list -->
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="./product.html"class="nav-link">Product</a></li>
+      <li><a href="./research.html"class="nav-link">Research</a></li>
+      <li><a href="./blog.html" class="nav-link">Blog</a></li>
+      <li class="dropdown"> <!-- Dropdown menu for more links -->
+        <a href="#" onclick="return false;" class="nav-link">More</a>
+        <ul class="dropdown-menu">
+          <li><a href="./contact.html"  class="dropdown-link">Contact</a></li>
+          <li><a href="./aboutus.html"  class="dropdown-link">About</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
     <script>
-    // Dropdown toggle with viewport adjustment
-    document.querySelectorAll('nav li').forEach(function(li) {
-      li.addEventListener('mouseenter', function() {
-        var dropdown = li.querySelector('ul');
-        if (dropdown) {
-          dropdown.style.display = 'block';
+  // Dropdown toggle with viewport adjustment
+  document.querySelectorAll('nav li').forEach(function(li) {
+    li.addEventListener('mouseenter', function() {
+      var dropdown = li.querySelector('ul');
+      if (dropdown) {
+        dropdown.style.display = 'block';
+        dropdown.style.left = '0';
+        dropdown.style.right = 'auto';
+        // Adjust position if cropped by the right edge
+        var rect = dropdown.getBoundingClientRect();
+        if (rect.right > window.innerWidth) {
+          dropdown.style.left = 'auto';
+          dropdown.style.right = '0';
+        }
+        // Adjust position if cropped by the left edge
+        if (rect.left < 0) {
           dropdown.style.left = '0';
           dropdown.style.right = 'auto';
-          // Adjust position if cropped by the right edge
-          var rect = dropdown.getBoundingClientRect();
-          if (rect.right > window.innerWidth) {
-            dropdown.style.left = 'auto';
-            dropdown.style.right = '0';
-          }
-          // Adjust position if cropped by the left edge
-          if (rect.left < 0) {
-            dropdown.style.left = '0';
-            dropdown.style.right = 'auto';
-          }
         }
-      });
-      li.addEventListener('mouseleave', function() {
-        var dropdown = li.querySelector('ul');
-        if (dropdown) dropdown.style.display = 'none';
-      });
+      }
     });
-    // This script handles showing/hiding dropdown menus and ensures they stay within the viewport
-    </script> 
-    <header>
-      <h1>Our products</h1>
-      <p>Products in store</p>
-    </header>
+    li.addEventListener('mouseleave', function() {
+      var dropdown = li.querySelector('ul');
+      if (dropdown) dropdown.style.display = 'none';
+    });
+  });
+  // This script handles showing/hiding dropdown menus and ensures they stay within the viewport
+</script> 
+
+<header class="title">
+    <h1>Our Products</h1>
+    <p>Shop Green with our range of eco-friendly products</p>
+</header>
     <style>
 /* Header styling */
 header {
-background-color: #92ff90;
-color: black;
-text-align: center;
-padding: 25px;
+    background-color: #92ff90;
+    color: black;
+    text-align: center;
+    padding: 25px;
+}
+
+.title {
+  background-color: #4f8687; 
+  text-align: center;
+  padding: 25px 15px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Products container: flex layout, centered, with spacing */
 .products {
-display: flex;
-justify-content: center;
-gap: 20px;
-padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px auto;
+      padding: 10px;  display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px auto;
+      padding: 10px;
 }
 
 /* Individual product card styling */
 .product {
-background: white;
-padding: 20px;
-width: 250px;
-border-radius: 5px;
-text-align: center;
+    background: #ffffff;
+      width: 260px;
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+      text-align: center;
+      border: 1px solid #e6e6e6;
+      text-decoration: none;
 }
 
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+.product img {
+
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      border: 2px solid #e0e0e0
+    }
 /* Product product-price styling */
 .product-price {
-color: red;
-font-weight: 600;
-margin: 25px 0 30px;
+  color: #c62828;                
+  font-weight: 800;
+  font-size: 16px;
+  margin: 6px 0 2px;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .product-old-price {
-text-decoration: line-through;
-color: black;
-font-weight: 600;
-margin: 25px 0 30px;;
-
+  color: #6b7280;                 
+  text-decoration: line-through;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
+
 
 /* Button styling */
 button {
-background-color: #80ef80;
-color: black;
-border: none;
-padding: 8px 12px;
-cursor: pointer;
+    background-color: #80ef80;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
 }
 
 /* Button hover effect */
 button:hover {
-background-color: #555;
+    background-color: #66d966;
 }
 
     </style>
 
     <!-- First row of products -->
     <main class="products">
-      <div class="product">
-        <h2><img src="../images/chopsticks.jpg" alt="Product Image"></h2>
-        <p>Chopsticks</p>
-        <div>
-          <div class="product-price">Npr 250</div>
-          <div class="product-old-price">Npr 300</div>
+        <div class="product">
+            <h2><img src="../images/chopsticks.jpg" alt="Product Image"></h2>
+            <p>Chopsticks</p>
+            <div>
+              <div class="product-price">Npr 250</div>
+              <div class="product-old-price">Npr 300</div>
+            </div>
+            <button><a href="./product_pages/chopsticks.html">Buy Now</a></button>
         </div>
-        <button><a href="./product_pages/chopsticks.html">Buy Now</a></button>
-      </div>
-      <div class="product">
-        <h2><img src="../images/bags.jpg" alt="Product Image"></h2>
-        <p>Jute Bag</p>
-        <div>
-          <div class="product-price">Npr 300</div>
-          <div class="product-old-price">Npr 500</div>
+        <div class="product">
+            <h2><img src="../images/bags.jpg" alt="Product Image"></h2>
+            <p>Jute Bag</p>
+            <div>
+              <div class="product-price">Npr 300</div>
+              <div class="product-old-price">Npr 500</div>
+            </div>
+            <button><a href="./product_pages/bags.html">Buy Now</a></button>
         </div>
-        <button><a href="./product_pages/bags.html">Buy Now</a></button>
-      </div>
-      <div class="product">
-        <h2><img src="../images/basket.jpg" alt="Product Image"></h2>
-        <p>Jute Basket</p>
-        <div>
-          <div class="product-price">Npr 1250</div>
-          <div class="product-old-price">Npr 1500</div>
+        <div class="product">
+            <h2><img src="../images/basket.jpg" alt="Product Image"></h2>
+            <p>Jute Basket</p>
+            <div>
+              <div class="product-price">Npr 1250</div>
+              <div class="product-old-price">Npr 1500</div>
+            </div>
+            <button><a href="./product_pages/basket.html">Buy Now</a></button>
         </div>
-        <button><a href="./product_pages/basket.html">Buy Now</a></button>
-      </div>
 
-      <div class="product">
-        <h2><img src="../images/Cocopeat.jpg" alt="Product Image"></h2>
-        <p>Cocopeat</p>
-        <div>
-          <div class="product-price">Npr 500</div>
-          <div class="product-old-price">Npr 800</div>
-        </div>          
+        <div class="product">
+            <h2><img src="../images/Cocopeat.jpg" alt="Product Image"></h2>
+            <p>Cocopeat</p>
+            <div>
+              <div class="product-price">Npr 500</div>
+              <div class="product-old-price">Npr 800</div>
+            </div>          
         <button><a href="./product_pages/cocopeat.html">Buy Now</a></button>
-      </div>
-      <br>    
+        </div>
+        <br>    
     </main>
     <!-- Second row of products -->
     <main class="products">
-      <div class="product">
-        <h2><img src="../images/container.jpg" alt="Product Image"></h2>
-        <p>Wooden Glass</p>
-        <div>
-          <div class="product-price">Npr 250</div>
-          <div class="product-old-price">Npr 300</div>
-        </div>              <button><a href="./product_pages/container.html">Buy Now</a></button>
-      </div>
-      <div class="product">
-        <h2><img src="../images/flowepot.jpg" alt="Product Image"></h2>
-        <p>Flower Pot</p>
-        <div>
-          <div class="product-price">Npr 500</div>
-          <div class="product-old-price">Npr 900</div>
-        </div> 
-        <button><a href="./product_pages/flowerpot.html">Buy Now</a></button>
-      </div>
-      <div class="product">
-        <h2><img src="../images/forks.jpg" alt="Product Image"></h2>
-        <p>Wooden Forks</p>
-        <div>
-          <div class="product-price">Npr 150</div>
-          <div class="product-old-price">Npr 250</div>
-        </div> 
-        <button><a href="./product_pages/forks.html">Buy Now</a></button>
-      </div>
-      <div class="product">
-        <h2><img src="../images/vase.jpg" alt="Product Image"></h2>
-        <p>Vase</p>
-        <div>
-          <div class="product-price">Npr 1500</div>
-          <div class="product-old-price">Npr 2500</div>
-        </div> 
-        <button><a href="./product_pages/vase.html">Buy Now</a></button>
-      </div>
-      <br>    
+        <div class="product">
+            <h2><img src="../images/container.jpg" alt="Product Image"></h2>
+            <p>Wooden Glass</p>
+            <div>
+              <div class="product-price">Npr 250</div>
+              <div class="product-old-price">Npr 300</div>
+            </div>              <button><a href="./product_pages/container.html">Buy Now</a></button>
+        </div>
+        <div class="product">
+            <h2><img src="../images/flowepot.jpg" alt="Product Image"></h2>
+            <p>Flower Pot</p>
+             <div>
+              <div class="product-price">Npr 500</div>
+              <div class="product-old-price">Npr 900</div>
+            </div> 
+            <button><a href="./product_pages/flowerpot.html">Buy Now</a></button>
+        </div>
+        <div class="product">
+            <h2><img src="../images/forks.jpg" alt="Product Image"></h2>
+            <p>Wooden Forks</p>
+             <div>
+              <div class="product-price">Npr 150</div>
+              <div class="product-old-price">Npr 250</div>
+            </div> 
+            <button><a href="./product_pages/forks.html">Buy Now</a></button>
+        </div>
+        <div class="product">
+            <h2><img src="../images/vase.jpg" alt="Product Image"></h2>
+            <p>Vase</p>
+             <div>
+              <div class="product-price">Npr 1500</div>
+              <div class="product-old-price">Npr 2500</div>
+            </div> 
+            <button><a href="./product_pages/vase.html">Buy Now</a></button>
+        </div>
+        <br>    
     </main>
+    
 
-
-    <footer class="footer">
-      <!-- Google Map (Leftmost) -->
-      <div class="footer-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.047187704176!2d85.32414031506134!3d27.70903198279159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f7e7c7e6d%3A0x7e1b7e736d9193c2!2sKamalpokhari%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1680000000000!5m2!1sen!2snp"
-          width="100%" height="150" class="footer-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <!-- Contact Info (Right to Map) -->
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: eco@mart.com.np</p>
-        <p>Phone: 01-4XXXXXX</p>
-        <p>Address: Kamalpokhari, Kathmandu</p>
-      </div>
-      <!-- Useful Links (Right to Contact) -->
-      <div class="footer-links">
-        <h3>Useful Links</h3>
-        <ul>
-          <li><a href="./aboutus.html" class="footer-link">About Us</a></li>
-          <li><a href="./contact.html" class="footer-link">Contact</a></li>
-          <li><a href="./blog.html" class="footer-link">Blog</a></li>
-        </ul>
-      </div>
-      <!-- Logo and Caption (Rightmost) -->
-      <div class="footer-logo">
-        <a href="../index.html" class="footer-logo-link">
-          <img src="../images/logo-nobackground.png" alt="Logo" class="footer-logo-img">
-          <span class="footer-caption">Shop Green. Live Clean</span>
-        </a>
-      </div>
-    </footer>
+ <footer class="footer">
+  <!-- Google Map (Leftmost) -->
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.047187704176!2d85.32414031506134!3d27.70903198279159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f7e7c7e6d%3A0x7e1b7e736d9193c2!2sKamalpokhari%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1680000000000!5m2!1sen!2snp"
+      width="100%" height="150" class="footer-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <!-- Contact Info (Right to Map) -->
+  <div class="footer-contact">
+    <h3>Contact Us</h3>
+    <p>Email: eco@mart.com.np</p>
+    <p>Phone: 01-4XXXXXX</p>
+    <p>Address: Kamalpokhari, Kathmandu</p>
+  </div>
+  <!-- Useful Links (Right to Contact) -->
+  <div class="footer-links">
+    <h3>Useful Links</h3>
+    <ul>
+      <li><a href="./aboutus.html" class="footer-link">About Us</a></li>
+      <li><a href="./contact.html" class="footer-link">Contact</a></li>
+      <li><a href="./blog.html" class="footer-link">Blog</a></li>
+    </ul>
+  </div>
+  <!-- Logo and Caption (Rightmost) -->
+  <div class="footer-logo">
+    <a href="../index.html" class="footer-logo-link">
+      <img src="../images/logo-nobackground.png" alt="Logo" class="footer-logo-img">
+      <span class="footer-caption">Shop Green. Live Clean</span>
+    </a>
+  </div>
+</footer>
   </body>
 </html>
 
