@@ -1,9 +1,10 @@
+/* Body background */
 .body{
   background-color: #adebb3;
 }
 
+/* Navigation bar styles */
 .navbar {
-
   width: 100%;
   height: 90px;
   background-color: #e8ffe8;
@@ -13,18 +14,17 @@
   padding: 10px;
   border-radius: 10px;
   margin:10px;
-gap: 16px;
+  gap: 16px;
 }
 
-
+/* Logo image in navbar */
 .logo {
   height: 50px;
   object-fit: contain;
 }
 
-
+/* Navigation list container */
 .nav-list {
-
   display: flex;
   flex: 1;
   justify-content: space-evenly;
@@ -34,30 +34,32 @@ gap: 16px;
   margin: 0;
   padding: 0;
   width: 100%;                   
-
 }
 
+/* Navigation link styles */
 .nav-link {
   font-family: arial black, sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #6b502e;
   padding: 8px 14px;
-text-decoration: none;
+  text-decoration: none;
 }
 
+/* Navigation link hover effect */
 .nav-link:hover {
   color: white;
   background-color: #2e7d32;
   border-radius: 8px;
 }
 
+/* Dropdown container */
 .dropdown {
   position: relative;
 }
 
+/* Dropdown menu styles */
 .dropdown-menu {
-
   display: none;
   position: absolute;
   background: #c0ec97;
@@ -66,15 +68,16 @@ text-decoration: none;
   list-style: none;
 }
 
+/* Dropdown link styles */
 .dropdown-link {
-
   text-decoration: none;
   color: #000;
- font-size: 18px;
+  font-size: 18px;
   display: block;
   padding: 6px 10px;
-
 }
+
+/* Footer styles */
 .footer {
   background: #fcfbf4;
   border-radius: 10px;
@@ -86,34 +89,48 @@ text-decoration: none;
   padding: 20px;
   z-index: 100;
 }
+
+/* Footer map section */
 .footer-map {
   flex: 1;
   min-width: 250px;
   margin-right: 20px;
 }
+
+/* Footer iframe styles */
 .footer-iframe {
   border: 0;
   border-radius: 8px;
 }
+
+/* Footer contact section */
 .footer-contact {
   flex: 1;
   min-width: 200px;
   text-align: center;
   color: black;
 }
+
+/* Footer links section */
 .footer-links {
   flex: 1;
   min-width: 150px;
   color: black;
 }
+
+/* Footer links list */
 .footer-links ul {
   list-style: none;
   padding: 0;
 }
+
+/* Individual footer link */
 .footer-link {
   color: black;
   text-decoration: underline;
 }
+
+/* Footer logo section */
 .footer-logo {
   flex: 1;
   min-width: 150px;
@@ -121,17 +138,23 @@ text-decoration: none;
   flex-direction: column;
   align-items: center;
 }
+
+/* Footer logo link container */
 .footer-logo-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
+
+/* Footer logo image */
 .footer-logo-img {
   height: 50px;
   width: 240px;
   display: block;
 }
+
+/* Footer caption text */
 .footer-caption {
   margin-top: 6px;
   color: black;
