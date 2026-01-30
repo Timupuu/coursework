@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="author" content="EcoMart Team"> <!-- Author of the webpage -->
+    <meta name="keywords" content="EcoMart, Eco-friendly products, Sustainable shopping, Green living, Biodegradable items"> <!-- SEO keywords -->
+    <meta name="description" content="EcoMart, Shop green, live clean with our range of biodegradable and environmentally friendly items."> <!-- SEO description -->
     <meta charset="UTF-7">
     <meta name="viewport" content="width=device-width, initial-scale=2">
     <title>Chopsticks Eco Mart</title>
@@ -11,7 +14,7 @@
  <link rel="icon" type="image/png" href="../../images/slogo.png">
 
   </head>
-<body>
+<body style="background-color: #adebb3;">
 <nav class="navbar">
     <a href="../../index.html">
       <img src="../../images/logo-nobackground.png" alt="Logo" class="logo">
@@ -37,9 +40,10 @@
         </div>
         <div class="product-details">
             <div class="product-title">Vase</div>
-            <div class="product-price">Npr 500</div>
+            <div class="product-price">Npr 1500</div>
             <div class="product-description">
-                <p>High-quality wooden chopsticks, perfect for enjoying your favorite Asian dishes at home.</p>
+                <p>A minimalist wooden vase crafted from solid, eco‑friendly timber, adding natural beauty to any corner of your home.
+                  Perfect for flowers, decor styling, or gifting.</p>
             </div>
             <div style="display: flex; align-items: center;">
               <!-- Counter to the left of Buy Now button -->
@@ -52,7 +56,25 @@
             </div>
         </div>
     </div>
-   
+   <div class="review-box">
+  <h2>Write Your Review</h2>
+
+  <form id="reviewForm" onsubmit="ReviewAlert(); return false;">
+    <label>Your Name (optional)</label><br>
+    <input type="text" placeholder="Enter your name">
+
+    <label>Your Review</label><br>
+    <textarea rows="4" placeholder="Your Review" required></textarea>
+
+    <button type="submit" class="review-submit-btn">Submit Review</button>
+  </form>
+</div>
+
+<script>
+  function ReviewAlert() {
+    alert("Thank you! Your review has been submitted.");
+  }
+</script>
     <footer class="footer">
   <!-- Google Map (Leftmost) -->
   <div class="footer-map">
