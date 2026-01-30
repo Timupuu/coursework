@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element with language set to English -->
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog</title>
-    <link href="../css/style.css" rel="stylesheet">
- <link rel="icon" type="image/png" href="../images/slogo.png">
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design for mobile devices -->
+    <title>Blog</title> <!-- Title of the page shown in browser tab -->
+    <link href="../css/style.css" rel="stylesheet"> <!-- External CSS file for styling -->
+    <link rel="icon" type="image/png" href="../images/slogo.png"> <!-- Favicon for the website -->
 
- <style>
+    <style>
+    /* Header styling */
     header {
         background-color: #4f8687;
         padding: 10px;
@@ -15,16 +16,18 @@
         border-radius: 10px;
         margin: 10px;
     }
+    /* Main blog title styling */
     header .title h1 {
         margin: 0;
         color: #fff;
         font-family: 'Arial Black', Gadget, sans-serif;
     }
+    /* Blog subtitle styling */
     header .title h2 {
         margin: 5px;
         color: #fff;
-
     }
+    /* Blog post container: flex row, spaced, background color, rounded corners */
     .blog-post {
         display: flex;
         flex-direction: row;
@@ -34,46 +37,48 @@
         padding: 25px;
         border-radius: 10px;
     }
-    
+    /* Blog text section: takes up remaining space, margin to right */
     .blog-post .blog {
         flex: 1;
         margin-right: 10px;
     }
+    /* Blog post title styling */
     .blog-post .blog h2 {
         font-family: 'Arial Black', Gadget, sans-serif;
     }
+    /* Blog post paragraph styling */
     .blog-post .blog p{
         text-align: justify;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: medium;
     }
-
+    /* Blog image section: centers image vertically and horizontally */
     .blog-post .blog-pic {
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+    /* Blog image styling: max width and rounded corners */
     .blog-post .blog-pic img {
         max-width: 50%;
         border-radius: 10px;
-
     }
-
     </style>
   </head>
-  <body style="background-color: #adebb3;">
+  <body style="background-color: #adebb3;"> <!-- Sets background color for the page -->
   
-<<nav class="navbar">
+  <!-- Navigation bar -->
+  <nav class="navbar">
     <a href="index.html">
-      <img src="../images/logo-nobackground.png" alt="Logo" class="logo">
+      <img src="../images/logo-nobackground.png" alt="Logo" class="logo"> <!-- Website logo -->
     </a>  
-    <ul class="nav-list"> 
+    <ul class="nav-list"> <!-- Navigation links list -->
       <li><a href="../index.html" class="nav-link">Home</a></li>
       <li><a href="./product.html"class="nav-link">Product</a></li>
       <li><a href="./research.html"class="nav-link">Research</a></li>
       <li><a href="./blog.html" class="nav-link">Blog</a></li>
-      <li class="dropdown">
+      <li class="dropdown"> <!-- Dropdown menu for more links -->
         <a href="#" onclick="return false;" class="nav-link">More</a>
         <ul class="dropdown-menu">
           <li><a href="./contact.html"  class="dropdown-link">Contact</a></li>
@@ -82,41 +87,44 @@
       </li>
     </ul>
   </nav>
-<script>
-  // Dropdown toggle with viewport adjustment
-  document.querySelectorAll('nav li').forEach(function(li) {
-    li.addEventListener('mouseenter', function() {
-      var dropdown = li.querySelector('ul');
-      if (dropdown) {
-        dropdown.style.display = 'block';
-        dropdown.style.left = '0';
-        dropdown.style.right = 'auto';
-        // Adjust position if cropped by the right edge
-        var rect = dropdown.getBoundingClientRect();
-        if (rect.right > window.innerWidth) {
-          dropdown.style.left = 'auto';
-          dropdown.style.right = '0';
-        }
-        // Adjust position if cropped by the left edge
-        if (rect.left < 0) {
+  <script>
+    // Dropdown toggle with viewport adjustment
+    document.querySelectorAll('nav li').forEach(function(li) {
+      li.addEventListener('mouseenter', function() {
+        var dropdown = li.querySelector('ul');
+        if (dropdown) {
+          dropdown.style.display = 'block';
           dropdown.style.left = '0';
           dropdown.style.right = 'auto';
+          // Adjust position if cropped by the right edge
+          var rect = dropdown.getBoundingClientRect();
+          if (rect.right > window.innerWidth) {
+            dropdown.style.left = 'auto';
+            dropdown.style.right = '0';
+          }
+          // Adjust position if cropped by the left edge
+          if (rect.left < 0) {
+            dropdown.style.left = '0';
+            dropdown.style.right = 'auto';
+          }
         }
-      }
+      });
+      li.addEventListener('mouseleave', function() {
+        var dropdown = li.querySelector('ul');
+        if (dropdown) dropdown.style.display = 'none';
+      });
     });
-    li.addEventListener('mouseleave', function() {
-      var dropdown = li.querySelector('ul');
-      if (dropdown) dropdown.style.display = 'none';
-    });
-  });
-</script> 
-<header>
+    // This script handles showing/hiding dropdown menus and ensures they stay within the viewport
+  </script> 
+  <!-- Blog page header -->
+  <header>
         <div class="title">
             <h1>Technology & Sustainability</h1>
             <h2>The two-way Relationship between Tech and Sustainability</h2>
         </div>
     </header>
 
+    <!-- Blog post: Technology for Sustainability -->
     <article class="blog-post">
     <div class="blog">
       <h2>Technology for Sustainability</h2>
@@ -130,6 +138,7 @@
     </div>
     </article>
 
+    <!-- Blog post: Positive Impacts of Technology -->
     <article class="blog-post">
     <div class="blog">
       <h2>Positive Impacts of Technology</h2>
@@ -145,6 +154,7 @@
     </div>
     </article>
 
+    <!-- Blog post: Negative Impacts of Technology -->
     <article class="blog-post">
     <div class="blog">
       <h2>Negative Impacts of Technology</h2>
@@ -160,6 +170,7 @@
     </div>
     </article>
 
+    <!-- Blog post: How Technology Strengthens Sustainable Product Sales -->
     <article class="blog-post">
     <div class="blog">
       <h2>How Technology Strengthens Sustainable Product Sales</h2>
@@ -175,6 +186,7 @@
     </div>
     </article>
 
+    <!-- Blog post: Why Should We Choose Sustainable Products? -->
     <article class="blog-post">
     <div class="blog">
       <h2>Why Should We Choose Sustainable Products?</h2>
@@ -190,6 +202,7 @@
     </div>
     </article>
 
+    <!-- Blog post: Sustainable Living Tips & Tricks -->
     <article class="blog-post">
     <div class="blog">
       <h2>Sustainable Living Tips & Tricks</h2>
@@ -205,6 +218,7 @@
     </div>
     </article>
 
+    <!-- Blog post: What Sustainable Brands & Experts Say -->
     <article class="blog-post">
     <div class="blog">
       <h2>What Sustainable Brands & Experts Say</h2>
@@ -222,6 +236,7 @@
     </div>
     </article>
 
+    <!-- Blog post: News & Updates: Environmental Issues -->
     <article class="blog-post">
     <div class="blog">
       <h2>News & Updates: Environmental Issues</h2>
@@ -240,6 +255,7 @@
     </div>
     </article>
 
+    <!-- Blog post: Community Stories & Successes -->
     <article class="blog-post">
     <div class="blog">
       <h2>Community Stories & Successes</h2>
@@ -260,6 +276,7 @@
     </div>
     </article>
 
+    <!-- Blog post: In a Nutshell: Technology and Sustainability -->
     <article class="blog-post">
     <div class="blog">
       <h2>In a Nutshell: Technology and Sustainability</h2>
@@ -275,38 +292,40 @@
     </div>
     </article>
 
-
-
-<footer class="footer">
-  <!-- Google Map (Leftmost) -->
-  <div class="footer-map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.047187704176!2d85.32414031506134!3d27.70903198279159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f7e7c7e6d%3A0x7e1b7e736d9193c2!2sKamalpokhari%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1680000000000!5m2!1sen!2snp"
-      width="100%" height="150" class="footer-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-  <!-- Contact Info (Right to Map) -->
-  <div class="footer-contact">
-    <h3>Contact Us</h3>
-    <p>Email: eco@mart.com.np</p>
-    <p>Phone: 01-4XXXXXX</p>
-    <p>Address: Kamalpokhari, Kathmandu</p>
-  </div>
-  <!-- Useful Links (Right to Contact) -->
-  <div class="footer-links">
-    <h3>Useful Links</h3>
-    <ul>
-      <li><a href="./aboutus.html" class="footer-link">About Us</a></li>
-      <li><a href="./contact.html" class="footer-link">Contact</a></li>
-      <li><a href="./blog.html" class="footer-link">Blog</a></li>
-    </ul>
-  </div>
-  <!-- Logo and Caption (Rightmost) -->
-  <div class="footer-logo">
-    <a href="../index.html" class="footer-logo-link">
-      <img src="../images/logo-nobackground.png" alt="Logo" class="footer-logo-img">
-      <span class="footer-caption">Shop Green. Live Clean</span>
-    </a>
-  </div>
-</footer>
+  <!-- Footer section with map, contact info, links, and logo -->
+  <footer class="footer">
+    <!-- Google Map (Leftmost) -->
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.047187704176!2d85.32414031506134!3d27.70903198279159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f7e7c7e6d%3A0x7e1b7e736d9193c2!2sKamalpokhari%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1680000000000!5m2!1sen!2snp"
+        width="100%" height="150" class="footer-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Contact Info (Right to Map) -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: eco@mart.com.np</p>
+      <p>Phone: 01-4XXXXXX</p>
+      <p>Address: Kamalpokhari, Kathmandu</p>
+    </div>
+    <!-- Useful Links (Right to Contact) -->
+    <div class="footer-links">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="./aboutus.html" class="footer-link">About Us</a></li>
+        <li><a href="./contact.html" class="footer-link">Contact</a></li>
+        <li><a href="./blog.html" class="footer-link">Blog</a></li>
+      </ul>
+    </div>
+    <!-- Logo and Caption (Rightmost) -->
+    <div class="footer-logo">
+      <a href="../index.html" class="footer-logo-link">
+        <img src="../images/logo-nobackground.png" alt="Logo" class="footer-logo-img">
+        <span class="footer-caption">Shop Green. Live Clean</span>
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
+
+
+

@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element with language set to English -->
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us</title>
-    <link href="../css/style.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="../images/slogo.png">
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design for mobile devices -->
+    <title>Contact Us</title> <!-- Title of the page shown in browser tab -->
+    <link href="../css/style.css" rel="stylesheet"> <!-- External CSS file for styling -->
+    <link rel="icon" type="image/png" href="../images/slogo.png"> <!-- Favicon for the website -->
 
   <style>
+    /* Contact section: flex layout, spacing, centered */
     .contact-section {
       display: flex;
       gap: 15px;
@@ -16,6 +17,7 @@
       margin: 10px;
     }
   
+    /* Contact header styling */
     .contact-header {
       text-align: center;
       padding: 10px;
@@ -24,18 +26,21 @@
       margin: 10px;
     }
   
+    /* Contact header main title */
     .contact-header h1 {
       margin: 0;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
     }
   
+    /* Contact header subtitle */
     .contact-header h3 {
       margin: 5px;
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
   
+    /* Contact form and info box styling */
     .contact-form,
     .contact-info {
       flex: 1;
@@ -46,6 +51,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   
+    /* Section titles in form and info */
     .contact-form h2,
     .contact-info h2 {
       text-align: left;
@@ -53,9 +59,11 @@
       text-decoration: underline #4f8687;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-  .contact-form form strong {
-      color:#4f8687
-    }
+    /* Strong label color in form */
+    .contact-form form strong {
+        color:#4f8687
+      }
+    /* Input and textarea styling */
     .contact-form input[type="text"],
     .contact-form input[type="email"],
     .contact-form input[type="tel"],
@@ -68,6 +76,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
   
+    /* Submit button styling */
     .contact-form button {
       background-color: #4f8687;
       color: white;
@@ -77,12 +86,15 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
   
+    /* Button hover effect */
     .contact-form button:hover {
       background-color: #3b6667;
     }
+    /* Strong label color in info */
     .contact-info strong {
       color: #4f8687;
     }
+    /* Info box styling */
     #info-box {  
       background: #ffffff;
       border: 1px solid #ccc; 
@@ -93,20 +105,19 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       }
-
   </style>
   </head>
-  <body style="background-color: #adebb3;">
+  <body style="background-color: #adebb3;"> <!-- Sets background color for the page -->
 <nav class="navbar">
     <a href="index.html">
-      <img src="../images/logo-nobackground.png" alt="Logo" class="logo">
+      <img src="../images/logo-nobackground.png" alt="Logo" class="logo"> <!-- Website logo -->
     </a>  
-    <ul class="nav-list"> 
+    <ul class="nav-list"> <!-- Navigation links list -->
       <li><a href="../index.html" class="nav-link">Home</a></li>
       <li><a href="./product.html"class="nav-link">Product</a></li>
       <li><a href="./research.html"class="nav-link">Research</a></li>
       <li><a href="./blog.html" class="nav-link">Blog</a></li>
-      <li class="dropdown">
+      <li class="dropdown"> <!-- Dropdown menu for more links -->
         <a href="#" onclick="return false;" class="nav-link">More</a>
         <ul class="dropdown-menu">
           <li><a href="./contact.html"  class="dropdown-link">Contact</a></li>
@@ -142,6 +153,7 @@
       if (dropdown) dropdown.style.display = 'none';
     });
   });
+  // This script handles showing/hiding dropdown menus and ensures they stay within the viewport
 </script>
 <header>
   <div class="contact-header">
@@ -152,6 +164,7 @@
 <section class="contact-section">
 <div class="contact-form">
   <h2>Need Help? Send Us a Message!</h2>
+  <!-- Contact form for user input -->
   <form>
     <strong>Name:</strong><br>
     <input type="text" id="name" name="name" required><br>
@@ -168,19 +181,24 @@
   </form>
 </div>
 
-<script>  function submitMessage() {
+<script>
+  // Handles form submission and validation
+  function submitMessage() {
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let mobile = document.getElementById('mobile').value;
     let message = document.getElementById('message').value;
+    // Check if all fields are empty
     if (name === "" && email === "" && mobile === "" && message === "") {
       alert("Please fill the form before submitting!"); return false;
     }
+    // Simple email validation
     let emailcheck = email.includes("@") && email.includes(".");
     if (!emailcheck) {
       alert("Please enter a valid email address.");
       return false;
     }
+    // Check if message is empty
     if (message === "") {
       alert("Please write a message before submitting."); return false;
 
@@ -190,6 +208,7 @@
 
 <div class="contact-info">
   <h2>Our Contact Information</h2>
+  <!-- Contact details/info box -->
   <p id="info-box"><strong>Email:</strong> eco@mart.com.np</p>
   <p id="info-box"><strong>Phone:</strong> 01-4XXXXXX</p>
   <p id="info-box"><strong>Address:</strong> Kamalpokhari, Kathmandu</p>
@@ -232,3 +251,8 @@
 
   </body>
 </html>
+```
+
+#   Timupuu  (6cadeae7-dee8-4435-8e58-e29ba1287731) ───
+
+

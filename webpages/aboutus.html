@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element with language set to English -->
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Us</title>
-    <link href="../css/style.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../images/slogo.png">
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design for mobile devices -->
+    <title>About Us</title> <!-- Title of the page shown in browser tab -->
+    <link href="../css/style.css" rel="stylesheet"> <!-- External CSS file for styling -->
+    <link rel="icon" type="image/png" href="../images/slogo.png"> <!-- Favicon for the website -->
 <style>
 * {
   margin: 0;
@@ -14,13 +14,14 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+/* Body background and text color */
 body {
   background: #f4fbf6;
   color: #2e3d2f;
 }
 
-
 /* HEADER */
+/* About page header section styling */
 .about-header {
   padding: 80px 20px;
   text-align: center;
@@ -36,6 +37,7 @@ body {
 }
 
 /* TEAM */
+/* Team section container styling */
 .team-section {
   padding: 80px 30px;
   text-align: center;
@@ -46,6 +48,7 @@ body {
   color: #1b5e20;
 }
 
+/* Team member cards grid layout */
 .team-grid {
   display: flex;
   flex-wrap: wrap;     
@@ -54,6 +57,7 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+/* Individual team member card styling */
 .team-card {
   width: 260px;        
   background: white;
@@ -67,6 +71,7 @@ body {
   transform: translateY(-8px);
 }
 
+/* Team member image styling */
 .team-card img {
   width: 115px;
   height: 115px;
@@ -76,11 +81,13 @@ body {
   margin-bottom: 18px;
 }
 
+/* Team member name styling */
 .team-card h3 {
   color: #2e7d32;
 }
 
 /* MODAL */
+/* Modal overlay styling */
 .modal {
   position: fixed;
   inset: 0;
@@ -91,10 +98,12 @@ body {
   z-index: 999;
 }
 
+/* Show modal when .show class is added */
 .modal.show {
   display: flex;
 }
 
+/* Modal content box styling */
 .modal-content {
   background: white;
   width: 90%;
@@ -105,11 +114,13 @@ body {
   position: relative;
 }
 
+/* Animation for modal pop-in effect */
 @keyframes pop {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
 
+/* Close button styling */
 .close-btn {
   position: absolute;
   top: 15px;
@@ -118,27 +129,32 @@ body {
   cursor: pointer;
 }
 
+/* Modal body grid layout */
 .modal-body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 30px;
 }
 
+/* Modal image styling */
 .modal-body img {
   width: 100%;
   border-radius: 15px;
 }
 
+/* Modal name heading styling */
 .modal-body h2 {
   color: #1b5e20;
   margin-bottom: 10px;
 }
 
+/* Modal description paragraph styling */
 .modal-body p {
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
+/* CV button styling */
 .cv-btn {
   display: inline-block;
   padding: 10px 18px;
@@ -149,6 +165,7 @@ body {
 }
 
 /* MOBILE */
+/* Responsive modal body for small screens */
 @media (max-width: 700px) {
   .modal-body {
     grid-template-columns: 1fr;
@@ -156,17 +173,17 @@ body {
 }
 </style>
   </head>
-  <body style="background-color: #adebb3;">
+  <body style="background-color: #adebb3;"> <!-- Sets background color for the page -->
 <nav class="navbar">
     <a href="index.html">
-      <img src="../images/logo-nobackground.png" alt="Logo" class="logo">
+      <img src="../images/logo-nobackground.png" alt="Logo" class="logo"> <!-- Website logo -->
     </a>  
-    <ul class="nav-list"> 
+    <ul class="nav-list"> <!-- Navigation links list -->
       <li><a href="../index.html" class="nav-link">Home</a></li>
       <li><a href="./product.html"class="nav-link">Product</a></li>
       <li><a href="./research.html"class="nav-link">Research</a></li>
       <li><a href="./blog.html" class="nav-link">Blog</a></li>
-      <li class="dropdown">
+      <li class="dropdown"> <!-- Dropdown menu for more links -->
         <a href="#" onclick="return false;" class="nav-link">More</a>
         <ul class="dropdown-menu">
           <li><a href="./contact.html"  class="dropdown-link">Contact</a></li>
@@ -202,6 +219,7 @@ body {
       if (dropdown) dropdown.style.display = 'none';
     });
   });
+  // This script handles showing/hiding dropdown menus and ensures they stay within the viewport
 </script> 
 <section class="about-header">
   <h1>About EcoMart</h1>
@@ -212,26 +230,31 @@ body {
   <h2>Meet Our Team 🌿</h2>
 
   <div class="team-grid">
+    <!-- Team member 1 card -->
     <div class="team-card" onclick="openModal(1)">
       <img src="../images/user1.png">
       <h3>Arjan Timalsina</h3>
     </div>
 
+    <!-- Team member 2 card -->
     <div class="team-card" onclick="openModal(2)">
       <img src="../images/user2.png">
       <h3>Shuvam Bhakta Adhikari</h3>
     </div>
 
+    <!-- Team member 3 card -->
     <div class="team-card" onclick="openModal(3)">
       <img src="../images/user3.png">
       <h3>Purushottam Sapkota</h3>
     </div>
 
+    <!-- Team member 4 card -->
     <div class="team-card" onclick="openModal(4)">
       <img src="../images/user4.png">
       <h3>Riwaz Thapa</h3>
     </div>
 
+    <!-- Team member 5 card -->
     <div class="team-card"  onclick="openModal(5)">
       <img src="../images/user5.png">
       <h3>Aarju Dahal</h3>
@@ -240,6 +263,7 @@ body {
 </section>
 
 <!-- MODAL -->
+<!-- Modal popup for team member details -->
 <div class="modal" id="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal()">×</span>
@@ -255,6 +279,7 @@ body {
 </div>
 
 <script>
+// Data for each team member (name, image, description, CV link)
 const data = {
   1: {
     name: "Arjan Timalsina",
@@ -288,6 +313,7 @@ const data = {
   }
 };
 
+// Opens the modal and fills in the team member's data
 function openModal(id) {
   document.getElementById("modal").classList.add("show");
   document.getElementById("modalImg").src = data[id].img;
@@ -296,10 +322,12 @@ function openModal(id) {
   document.getElementById("modalCV").href = data[id].cv;
 }
 
+// Closes the modal
 function closeModal() {
   document.getElementById("modal").classList.remove("show");
 }
 
+// Close modal when clicking outside the modal content
 document.getElementById("modal").addEventListener("click", e => {
   if (e.target.id === "modal") closeModal();
 });
@@ -338,3 +366,6 @@ document.getElementById("modal").addEventListener("click", e => {
 
   </body>
 </html>
+
+
+

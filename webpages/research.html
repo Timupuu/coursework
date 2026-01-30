@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element with language set to English -->
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Research</title>
-    <link href="../css/style.css" rel="stylesheet">
-<link rel="icon" type="image/png" href="../images/slogo.png">
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design for mobile devices -->
+    <title>Research</title> <!-- Title of the page shown in browser tab -->
+    <link href="../css/style.css" rel="stylesheet"> <!-- External CSS file for styling -->
+    <link rel="icon" type="image/png" href="../images/slogo.png"> <!-- Favicon for the website -->
 
   </head>
-  <body style="background-color: #adebb3;">
+  <body style="background-color: #adebb3;"> <!-- Sets background color for the page -->
  <nav class="navbar">
     <a href="index.html">
-      <img src="../images/logo-nobackground.png" alt="Logo" class="logo">
+      <img src="../images/logo-nobackground.png" alt="Logo" class="logo"> <!-- Website logo -->
     </a>  
-    <ul class="nav-list"> 
+    <ul class="nav-list"> <!-- Navigation links list -->
       <li><a href="../index.html" class="nav-link">Home</a></li>
       <li><a href="./product.html"class="nav-link">Product</a></li>
       <li><a href="./research.html"class="nav-link">Research</a></li>
       <li><a href="./blog.html" class="nav-link">Blog</a></li>
-      <li class="dropdown">
+      <li class="dropdown"> <!-- Dropdown menu for more links -->
         <a href="#" onclick="return false;" class="nav-link">More</a>
         <ul class="dropdown-menu">
           <li><a href="./contact.html"  class="dropdown-link">Contact</a></li>
@@ -54,8 +54,10 @@
       if (dropdown) dropdown.style.display = 'none';
     });
   });
+  // This script handles showing/hiding dropdown menus and ensures they stay within the viewport
 </script>
     <style>
+    /* Blog post container: flex row, spaced, background color, rounded corners */
     .blog-post {
   display: flex;
   flex-direction: row;
@@ -70,6 +72,7 @@
   flex-direction: row-reverse;
 }
 
+/* Blog text section: takes up remaining space, margin to right */
 .blog {
   flex: 1;
   margin-right: 10px;
@@ -80,17 +83,20 @@
   margin-left: 10px;
 }
 
+/* Blog post title styling */
 .blog h2 {
   margin: 0;
   color: #2e7d32;
 }
 
+/* Blog post paragraph styling */
 .blog p {
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
 }
 
+/* Blog image section: centers image vertically and horizontally */
 .blog-pic {
   flex: 1;
   display: flex;
@@ -98,6 +104,7 @@
   align-items: center;
 }
 
+/* Blog image styling: max width and rounded corners */
 .blog-pic img {
   max-width: 50%;
   border-radius: 10px;
@@ -105,6 +112,7 @@
 
     </style>
  
+<!-- Blog post: AliExpress Accessibility Inspiration -->
 <article class="blog-post">
   <div class="blog">
     <h2>User Accessibility on AliExpress: Inspiration for EcoMart’s Website</h2>
@@ -117,6 +125,7 @@
   </div>
 </article>
 <br><br>
+<!-- Blog post: EcoMart’s Color Palette -->
 <article class="blog-post reverse">
   <div class="blog">
     <h2>EcoMart’s Color Palette: Drawing Inspiration from Sustainable Green Products</h2>
@@ -129,6 +138,7 @@
   </div>
 </article>
 <br><br>
+<!-- Blog post: Business Insider Template Inspiration -->
 <article class="blog-post">
   <div class="blog">
     <h2>Template Inspiration from Business Insider: A Research-Driven Approach</h2>
@@ -140,11 +150,6 @@
     <img src="../images/binsider.png" alt="Business Insider Template Inspiration">
   </div>
 </article>
-
-
-
-
-
 
 <footer class="footer">
   <!-- Google Map (Leftmost) -->
@@ -179,3 +184,6 @@
 </footer>
 </body>
 </html>
+
+
+

@@ -62,5 +62,27 @@
     box-shadow: 0 4px 16px rgba(255,168,26,0.18);
 }
 
+.counter-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .counter-btn {
+        background-color: #b8f0b8;
+        border: 1px solid #4f8687;
+        color: #333;
+        font-size: 18px;
+        width: 28px;
+        height: 28px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .counter-value {
+        min-width: 24px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+      }
 
 
