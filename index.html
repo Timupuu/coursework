@@ -1,56 +1,111 @@
 <!DOCTYPE html> <!-- Declares the document type and version of HTML -->
 <html lang="en"> <!-- Root element with language set to English -->
-  <head>
-    <meta name="author" content="EcoMart Team"> <!-- Author of the webpage -->
-    <meta name="keywords" content="EcoMart, Eco-friendly products, Sustainable shopping, Green living, Biodegradable items"> <!-- SEO keywords -->
-    <meta name="description" content="EcoMart, Shop green, live clean with our range of biodegradable and environmentally friendly items."> <!-- SEO description -->
-    <meta charset="UTF-8"> <!-- Sets character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design for mobile devices -->
-    <title>Home</title> <!-- Title of the page shown in browser tab -->
-    <link href="css/style.css" rel="stylesheet"> <!-- External CSS file for styling -->
-    <link rel="icon" type="image/png" href="./images/slogo.png"> <!-- Favicon for the website -->
-    <style>
+
+<head>
+  <meta name="author" content="EcoMart Team"> <!-- Author of the webpage -->
+  <meta name="keywords"
+    content="EcoMart, Eco-friendly products, Sustainable shopping, Green living, Biodegradable items">
+  <!-- SEO keywords -->
+  <meta name="description"
+    content="EcoMart, Shop green, live clean with our range of biodegradable and environmentally friendly items.">
+  <!-- SEO description -->
+  <meta charset="UTF-8"> <!-- Sets character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design for mobile devices -->
+  <title>Home</title> <!-- Title of the page shown in browser tab -->
+  <link href="css/style.css" rel="stylesheet"> <!-- External CSS file for styling -->
+  <link rel="icon" type="image/png" href="./images/slogo.png"> <!-- Favicon for the website -->
+  <style>
     /* Inline CSS for page-specific styles */
+    
+.heading {
+  width: 92%;
+  min-width: 1000px;
+  margin: 28px auto 12px;
+  padding-bottom: 6px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #217a5d;           
+  border-bottom: 2px solid #fff;
+  letter-spacing: 0.2px;
+  text-align: center  ;
+}
+
 
     /* Product list container: flex layout, centered, with spacing */
+
     .product-list {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      padding: 30px;
-      margin-bottom: 30px;
+      gap: 25px;
+      margin: 40px auto;
+      padding: 10px;
     }
+
     /* Individual product card styling */
+
     .product-card {
-      background: white;
-      padding: 20px;
-      width: 250px;
-      border-radius: 5px;
+      background: #ffffff;
+      width: 260px;
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.25s ease;
+      cursor: pointer;
       text-align: center;
-      display: block;
+      border: 1px solid #e6e6e6;
+      text-decoration: none;
     }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    }
+
     /* Product image styling */
     .product-image {
+
       width: 100%;
-      border-radius: 5px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      border: 2px solid #e0e0e0
     }
+
     /* Product name styling */
     .product-name {
-      font-weight: bold;
-      margin: 15px 0 5px 0;
-      color: black;
+
+      font-size: 20px;
+      font-weight: 700;
+      color: #1b5e20;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      font-family: "Segoe UI", Arial, sans-serif;
+
     }
+
     /* Product price styling */
     .product-price {
-      font-weight: bold;
-      margin: 10px 0 0 0;
-      color: black;
+
+      font-size: 18px;
+      font-weight: 600;
+      color: #c62828;
+      font-family: "Segoe UI", Arial, sans-seri
     }
+
     /* Blog list container: flex layout, spacing, centered */
     .blog-list {
+
+
       display: flex;
-      gap: 15px;
+      flex-wrap: wrap;
+      gap: 18px;
       justify-content: center;
+      margin: 24px auto;
+
+
     }
 
     /* Blog link styling: removes underline, inherits color, block display */
@@ -62,263 +117,295 @@
 
     /* Blog post card: flex row, spaced, background color, rounded corners */
     .blog-post {
+
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      background-color: #f7f7f7;
-      margin: 5px;
-      padding: 15px;
-      border-radius: 10px;
-      min-width: 700px;
+      align-items: center;
+      gap: 16px;
+      background: #f7f7f7;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 14px;
+      width: 99%;
+      min-width: 1000px;
+      min-height: 220px;
       box-sizing: border-box;
+
+
     }
 
     /* Blog picture container: centers image vertically and horizontally */
     .blog-pic {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+      width: 340px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      flex: 0 0 auto;
+
     }
 
     /* Blog image styling: max width and rounded corners */
     .blog-pic img {
-      max-width: 75%;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
       border-radius: 10px;
+
+
     }
 
     /* Blog text container: takes up remaining space, margin to left */
     .blog {
-      flex: 1;
-      margin-left: 20px;
+
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column
     }
 
     /* Blog post title styling */
     .blog h2 {
-      margin: 5px;
-      color: #388e3c;
-      font-family: 'Arial Black', Gadget, sans-serif;
+
+      margin: 0 0 8px;
+      color: #2e7d32;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+
     }
 
     /* Blog post paragraph styling */
     .blog p {
+      margin: 0;
       text-align: justify;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       font-size: medium;
     }
+  </style>
+</head>
 
-    </style>
-  </head>
-  <body style="background-color: #adebb3;"> <!-- Sets background color for the page -->
-    <!-- Navigation bar-->
-    <nav class="navbar">
-      <a href="index.html">
-        <img src="./images/logo-nobackground.png" alt="Logo" class="logo"> <!-- Website logo -->
-      </a>  
-      <ul class="nav-list"> <!-- Navigation links list -->
-        <li><a href="./index.html" class="nav-link">Home</a></li>
-        <li><a href="./webpages/product.html" target="_blank" class="nav-link">Product</a></li>
-        <li><a href="./webpages/research.html" target="_blank" class="nav-link">Research</a></li>
-        <li><a href="./webpages/blog.html" target="_blank" class="nav-link">Blog</a></li>
-        <li class="dropdown"> <!-- Dropdown menu for more links -->
-          <a href="#" onclick="return false;" class="nav-link">More</a>
-          <ul class="dropdown-menu">
-            <li><a href="./webpages/contact.html" target="_blank" class="dropdown-link">Contact</a></li>
-            <li><a href="./webpages/aboutus.html" target="_blank" class="dropdown-link">About</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-<div style="border-top: 4px solid #2e7d32; border-bottom: 4px solid #2e7d32; width: 100%; margin: 32px 0; display: flex; justify-content: center; align-items: center; background: #eafbe7;">
-  <iframe
-    style="width: 75vw; max-width: 75%; height: 42vw; max-height: 420px;"
-    src="https://www.youtube.com/embed/lzVWXyXnarI?autoplay=1&mute=1&rel=0&modestbranding=1"
-    title="Go Green, Your Way!"
-    frameborder="0"
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-  </iframe>
-</div>
-    <script>
-      // Dropdown toggle with viewport adjustment
-      document.querySelectorAll('nav li').forEach(function(li) {
-        li.addEventListener('mouseenter', function() {
-          var dropdown = li.querySelector('ul');
-          if (dropdown) {
-            dropdown.style.display = 'block';
+<body style="background-color: #adebb3;"> <!-- Sets background color for the page -->
+  <!-- Navigation bar-->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="./images/logo-nobackground.png" alt="Logo" class="logo"> <!-- Website logo -->
+    </a>
+    <ul class="nav-list"> <!-- Navigation links list -->
+      <li><a href="./index.html" class="nav-link">Home</a></li>
+      <li><a href="./webpages/product.html" target="_blank" class="nav-link">Product</a></li>
+      <li><a href="./webpages/research.html" target="_blank" class="nav-link">Research</a></li>
+      <li><a href="./webpages/blog.html" target="_blank" class="nav-link">Blog</a></li>
+      <li class="dropdown"> <!-- Dropdown menu for more links -->
+        <a href="#" onclick="return false;" class="nav-link">More</a>
+        <ul class="dropdown-menu">
+          <li><a href="./webpages/contact.html" target="_blank" class="dropdown-link">Contact</a></li>
+          <li><a href="./webpages/aboutus.html" target="_blank" class="dropdown-link">About</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div
+    style="border-top: 4px solid #2e7d32; border-bottom: 4px solid #2e7d32; width: 100%; margin: 32px 0; display: flex; justify-content: center; align-items: center; background: #eafbe7;">
+    <iframe style="width: 75vw; max-width: 75%; height: 42vw; max-height: 420px;"
+      src="https://www.youtube.com/embed/lzVWXyXnarI?autoplay=1&mute=1&rel=0&modestbranding=1"
+      title="Go Green, Your Way!" frameborder="0" loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+  </div>
+  <script>
+    // Dropdown toggle with viewport adjustment
+    document.querySelectorAll('nav li').forEach(function (li) {
+      li.addEventListener('mouseenter', function () {
+        var dropdown = li.querySelector('ul');
+        if (dropdown) {
+          dropdown.style.display = 'block';
+          dropdown.style.left = '0';
+          dropdown.style.right = 'auto';
+          // Adjust position if cropped by the right edge
+          var rect = dropdown.getBoundingClientRect();
+          if (rect.right > window.innerWidth) {
+            dropdown.style.left = 'auto';
+            dropdown.style.right = '0';
+          }
+          // Adjust position if cropped by the left edge
+          if (rect.left < 0) {
             dropdown.style.left = '0';
             dropdown.style.right = 'auto';
-            // Adjust position if cropped by the right edge
-            var rect = dropdown.getBoundingClientRect();
-            if (rect.right > window.innerWidth) {
-              dropdown.style.left = 'auto';
-              dropdown.style.right = '0';
-            }
-            // Adjust position if cropped by the left edge
-            if (rect.left < 0) {
-              dropdown.style.left = '0';
-              dropdown.style.right = 'auto';
-            }
           }
-        });
-        li.addEventListener('mouseleave', function() {
-          var dropdown = li.querySelector('ul');
-          if (dropdown) dropdown.style.display = 'none';
-        });
+        }
       });
-      // This script handles showing/hiding dropdown menus and ensures they stay within the viewport
-    </script>
+      li.addEventListener('mouseleave', function () {
+        var dropdown = li.querySelector('ul');
+        if (dropdown) dropdown.style.display = 'none';
+      });
+    });
+    // This script handles showing/hiding dropdown menus and ensures they stay within the viewport
+  </script>
 
-   
-    <div class="product-list">
-      <!-- Product 1: Chopsticks -->
-      <a href="./webpages/product_pages/chopsticks.html" title="Product 1" class="product-card">
-         <img src="./images/chopsticks.jpg" alt="Product 1" class="product-image">
-         <div class="product-name">Chopsticks</div>
-         <div class="product-price">Npr 250</div>
-       </a>
-      <!-- Product 2: Bags -->
-      <a href="./webpages/product_pages/bags.html" title="Product 2" class="product-card">
-         <img src="./images/bags.jpg" alt="Product 2" class="product-image">
-         <div class="product-name">Bags</div>
-         <div class="product-price">Npr 500</div>
-       </a>
-        <br><br>  
-      <!-- Product 3: Basket -->
-      <a href="./webpages/product_pages/basket.html" title="Product 3" class="product-card">
-         <img src="./images/basket.jpg" alt="Product 3" class="product-image">
-         <div class="product-name">Basket</div>
-         <div class="product-price">Npr 1250</div>
-       </a>
-      <!-- Product 4: Cocopeat -->
-       <a href="./webpages/product_pages/cocopeat.html" title="Product 4" class="product-card">
-         <img src="./images/Cocopeat.jpg" alt="Product 4" class="product-image">
-         <div class="product-name">Cocopeat</div>
-         <div class="product-price">Npr 1500</div>
-       </a>
-    </div>
+<h2 class="heading">Best Sellers</h2>
+  <div class="product-list">
+    <!-- Product 1: Chopsticks -->
+    <a href="./webpages/product_pages/chopsticks.html" title="Product 1" class="product-card">
+      <img src="./images/chopsticks.jpg" alt="Product 1" class="product-image">
+      <div class="product-name">Chopsticks</div>
+      <div class="product-price">Npr 250</div>
+    </a>
+    <!-- Product 2: Bags -->
+    <a href="./webpages/product_pages/bags.html" title="Product 2" class="product-card">
+      <img src="./images/bags.jpg" alt="Product 2" class="product-image">
+      <div class="product-name">Bags</div>
+      <div class="product-price">Npr 500</div>
+    </a>
     <br><br>
-    <div class="blog-list">
-      <!-- Blog post 1 preview -->
-      <a href="blog.html" class="blog-link">
-        <article class="blog-post">
-          <div class="blog-pic">
-            <img src="./images/blogpost1.jpeg" alt="Technology for Sustainability">
-          </div>
-          <div class="blog">
-            <h2>Technology for Sustainability</h2>
-            <p>
-              Technology strongly influences modern life, shaping how people work, communicate, and make everyday choices. It has
-              transformed business operations, marketing, and customer engagement while also supporting environmental monitoring and
-              sustainable practices. For a sustainability-focused store like EcoMart, technology plays a key role in educating
-              consumers, promoting eco-friendly products, and encouraging responsible, environmentally conscious lifestyles.
-            </p>
-          </div>
-        </article>
-      </a>
-      <!-- Blog post 2 preview -->
-      <a href="blog.html" class="blog-link">
-        <article class="blog-post">
-          <div class="blog-pic">
-            <img src="./images/blogpost2.jpg" alt="Positive Impacts of Technology">
-          </div>
-          <div class="blog">
-            <h2>Positive Impacts of Technology</h2>
-            <p>
-              Technology has a strong positive impact on sustainability by improving awareness, innovation, and efficiency. It
-              enables environmental campaigns and educational content to reach a global audience, helping people understand issues
-              like climate change and waste reduction. Technological advancements have also introduced renewable energy,
-              biodegradable materials, and low-waste production methods that reduce environmental harm. With the growing use of
-              smart devices, electric vehicles, and energy-efficient technologies, society is steadily moving toward cleaner and
-              more sustainable lifestyles.
-            </p>
-          </div>
-        </article>
+    <!-- Product 3: Basket -->
+    <a href="./webpages/product_pages/basket.html" title="Product 3" class="product-card">
+      <img src="./images/basket.jpg" alt="Product 3" class="product-image">
+      <div class="product-name">Basket</div>
+      <div class="product-price">Npr 1250</div>
+    </a>
+    <!-- Product 4: Cocopeat -->
+    <a href="./webpages/product_pages/cocopeat.html" title="Product 4" class="product-card">
+      <img src="./images/Cocopeat.jpg" alt="Product 4" class="product-image">
+      <div class="product-name">Cocopeat</div>
+      <div class="product-price">Npr 1500</div>
+    </a>
+  </div>
+  <br><br>
+  <h2 class="heading">EcoMart BlogPost</h2>
+  <div class="blog-list">
+    <!-- Blog post 1 preview -->
+    <a href="blog.html" class="blog-link">
+      <article class="blog-post">
+        <div class="blog-pic">
+          <img src="./images/blogpost1.jpeg" alt="Technology for Sustainability">
+        </div>
+        <div class="blog">
+          <h2>Technology for Sustainability</h2>
+          <p>
+            Technology strongly influences modern life, shaping how people work, communicate, and make everyday choices.
+            It has
+            transformed business operations, marketing, and customer engagement while also supporting environmental
+            monitoring and
+            sustainable practices. For a sustainability-focused store like EcoMart, technology plays a key role in
+            educating
+            consumers, promoting eco-friendly products, and encouraging responsible, environmentally conscious
+            lifestyles.
+          </p>
+        </div>
+      </article>
+    </a>
+    <!-- Blog post 2 preview -->
+    <a href="blog.html" class="blog-link">
+      <article class="blog-post">
+        <div class="blog-pic">
+          <img src="./images/blogpost2.jpg" alt="Positive Impacts of Technology">
+        </div>
+        <div class="blog">
+          <h2>Positive Impacts of Technology</h2>
+          <p>
+            Technology has a strong positive impact on sustainability by improving awareness, innovation, and
+            efficiency. It
+            enables environmental campaigns and educational content to reach a global audience, helping people
+            understand issues
+            like climate change and waste reduction. Technological advancements have also introduced renewable energy,
+            biodegradable materials, and low-waste production methods that reduce environmental harm. With the growing
+            use of
+            smart devices, electric vehicles, and energy-efficient technologies, society is steadily moving toward
+            cleaner and
+            more sustainable lifestyles.
+          </p>
+        </div>
+      </article>
+    </a>
+  </div>
+<h2 class="heading">Our Other Products</h2>
+  <div class="product-list">
+    <!-- Duplicate product list  -->
+    <a href="./webpages/product_pages/container.html" title="Product 1" class="product-card">
+      <img src="./images/container.jpg" alt="Product 1" class="product-image">
+      <div class="product-name">Wooden Glass</div>
+      <div class="product-price">Npr 250</div>
+    </a>
+    <a href="./webpages/product_pages/forks.html" title="Product 2" class="product-card">
+      <img src="./images/forks.jpg" alt="Product 2" class="product-image">
+      <div class="product-name">Forks</div>
+      <div class="product-price">Npr 150</div>
+    </a>
+    <br><br>
+    <a href="./webpages/product_pages/vase.html" title="Product 3" class="product-card">
+      <img src="./images/vase.jpg" alt="Product 3" class="product-image">
+      <div class="product-name">Vase</div>
+      <div class="product-price">Npr 1500</div>
+    </a>
+    <a href="./webpages/product_pages/cocopeat.html" title="Product 1" class="product-card">
+      <img src="./images/Cocopeat.jpg" alt="Product 1" class="product-image">
+      <div class="product-name">Cocopeat</div>
+      <div class="product-price">Npr 250</div>
+    </a>
+    <a href="./webpages/product_pages/flowerpot.html" title="Product 2" class="product-card">
+      <img src="./images/flowepot.jpg" alt="Product 2" class="product-image">
+      <div class="product-name">Flower Pot</div>
+      <div class="product-price">Npr 500</div>
+    </a>
+    <br><br>
+  </div>
+
+<h2 class="heading">Upcoming Sales on EcoMart!</h2>
+  <!-- Table showing upcoming sales -->
+  <table border="1" cellpadding="8" cellspacing="0" style="margin: 40px auto; width: 80%; text-align: center;">
+    <tr style="background-color: #2e7d32; color: white;">
+      <th>Upcoming Sales</th>
+      <th>Date of Sale</th>
+    </tr>
+    <tr style="background-color: #fff;">
+      <td>Valentine's Day Sale</td>
+      <td>10th February 2026</td>
+    </tr>
+    <tr style="background-color: #fff;">
+      <td>Holi Sale</td>
+      <td>1st March 2026</td>
+    </tr>
+    <tr style="background-color: #fff;">
+      <td>Nepali New Year Sale</td>
+      <td>14th April 2026</td>
+    </tr>
+  </table>
+
+  <!-- Footer section with map, contact info, links, and logo -->
+  <footer class="footer">
+    <!-- Google Map (Leftmost) -->
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.047187704176!2d85.32414031506134!3d27.70903198279159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f7e7c7e6d%3A0x7e1b7e736d9193c2!2sKamalpokhari%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1680000000000!5m2!1sen!2snp"
+        width="100%" height="150" class="footer-iframe" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Contact Info (Right to Map) -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: eco@mart.com.np</p>
+      <p>Phone: 01-4XXXXXX</p>
+      <p>Address: Kamalpokhari, Kathmandu</p>
+    </div>
+    <!-- Useful Links (Right to Contact) -->
+    <div class="footer-links">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="./webpages/aboutus.html" class="footer-link">About Us</a></li>
+        <li><a href="./webpages/contact.html" class="footer-link">Contact</a></li>
+        <li><a href="./webpages/blog.html" class="footer-link">Blog</a></li>
+      </ul>
+    </div>
+    <!-- Logo and Caption (Rightmost) -->
+    <div class="footer-logo">
+      <a href="./index.html" class="footer-logo-link">
+        <img src="./images/logo-nobackground.png" alt="Logo" class="footer-logo-img">
+        <span class="footer-caption">Shop Green. Live Clean</span>
       </a>
     </div>
-      
-    <div class="product-list">
-      <!-- Duplicate product list  -->
-      <a href="./webpages/product_pages/chopsticks.html" title="Product 1" class="product-card">
-         <img src="./images/chopsticks.jpg" alt="Product 1" class="product-image">
-         <div class="product-name">Chopsticks</div>
-         <div class="product-price">Npr 250</div>
-       </a>
-      <a href="./webpages/product_pages/bags.html" title="Product 2" class="product-card">
-         <img src="./images/bags.jpg" alt="Product 2" class="product-image">
-         <div class="product-name">Bags</div>
-         <div class="product-price">Npr 500</div>
-       </a>
-        <br><br>  
-      <a href="./webpages/product_pages/basket.html" title="Product 3" class="product-card">
-         <img src="./images/basket.jpg" alt="Product 3" class="product-image">
-         <div class="product-name">Basket</div>
-         <div class="product-price">Npr 1250</div>
-       </a>
-      <a href="./webpages/product_pages/cocopeat.html" title="Product 1" class="product-card">
-         <img src="./images/Cocopeat.jpg" alt="Product 1" class="product-image">
-         <div class="product-name">Cocopeat</div>
-         <div class="product-price">Npr 250</div>
-       </a>
-      <a href="./webpages/product_pages/flowerpot.html" title="Product 2" class="product-card">
-         <img src="./images/flowepot.jpg" alt="Product 2" class="product-image">
-         <div class="product-name">Bags</div>
-         <div class="product-price">Npr 500</div>
-       </a>
-        <br><br>  
-      <a href="./webpages/product_pages/vase.html" title="Product 3" class="product-card">
-         <img src="./images/vase.jpg" alt="Product 3" class="product-image">
-         <div class="product-name">Vase</div>
-         <div class="product-price">Npr 1250</div>
-       </a>
+  </footer>
+</body>
 
-    </div>
-    
-
-    <!-- Table showing upcoming sales -->
-    <table border="1" cellpadding="8" cellspacing="0">
-      <tr>
-          <th>Upcoming Sales</th>
-          <th>Date of Sale</th>
-      </tr>
-      <tr>
-          <td>New Year Sale</td>
-          <td>20th January 2026</td>
-      </tr>
-    </table>
-    <!-- Footer section with map, contact info, links, and logo -->
-    <footer class="footer">
-      <!-- Google Map (Leftmost) -->
-      <div class="footer-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.047187704176!2d85.32414031506134!3d27.70903198279159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f7e7c7e6d%3A0x7e1b7e736d9193c2!2sKamalpokhari%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1680000000000!5m2!1sen!2snp"
-          width="100%" height="150" class="footer-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <!-- Contact Info (Right to Map) -->
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: eco@mart.com.np</p>
-        <p>Phone: 01-4XXXXXX</p>
-        <p>Address: Kamalpokhari, Kathmandu</p>
-      </div>
-      <!-- Useful Links (Right to Contact) -->
-      <div class="footer-links">
-        <h3>Useful Links</h3>
-        <ul>
-          <li><a href="./webpages/aboutus.html" class="footer-link">About Us</a></li>
-          <li><a href="./webpages/contact.html" class="footer-link">Contact</a></li>
-          <li><a href="./webpages/blog.html" class="footer-link">Blog</a></li>
-        </ul>
-      </div>
-      <!-- Logo and Caption (Rightmost) -->
-      <div class="footer-logo">
-        <a href="./index.html" class="footer-logo-link">
-          <img src="./images/logo-nobackground.png" alt="Logo" class="footer-logo-img">
-          <span class="footer-caption">Shop Green. Live Clean</span>
-        </a>
-      </div>
-    </footer>
-  </body>
 </html>
