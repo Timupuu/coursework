@@ -13,7 +13,8 @@
     <link rel="icon" type="image/png" href="../../images/slogo.png">
 
     <script src="../../scripts/product-counter.js"></script> <!-- External JS for counter -->
-  </head>
+        <script src="../../scripts/product-review.js"></script> <!-- External JS for review alert -->
+    <script src="../../scripts/product-buy.js"></script> <!-- External JS for buy alert -->
   <body style="background-color: #adebb3;">
     <nav class="navbar">
       <a href="../../index.html">
@@ -54,7 +55,7 @@
             <span class="counter-value">1</span>
             <button class="counter-btn" onclick="incrementCounter(this)">+</button>
           </div>
-          <a href="checkout.html?product=container" class="buy-now-btn" style="margin-left: 10px;">Buy Now</a>
+          <button class="buy-now-btn" onclick="BuyAlert()" style="margin-left: 20px;">Buy Now</button>
         </div>
       </div>
     </div>
@@ -71,12 +72,6 @@
         <button type="submit" class="review-submit-btn">Submit Review</button>
       </form>
     </div>
-
-    <script>
-    function ReviewAlert() {
-      alert("Thank you! Your review has been submitted.");
-    }
-    </script>
     <footer class="footer">
       <!-- Google Map (Leftmost) -->
       <div class="footer-map">
