@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research</title>
+    <link href="../css/style.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="../images/slogo.png">
+
+  </head>
+  <body style="background-color: #adebb3;">
+ <nav class="navbar">
+    <a href="index.html">
+      <img src="../images/logo-nobackground.png" alt="Logo" class="logo">
+    </a>  
+    <ul class="nav-list"> 
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="./product.html"class="nav-link">Product</a></li>
+      <li><a href="./research.html"class="nav-link">Research</a></li>
+      <li><a href="./blog.html" class="nav-link">Blog</a></li>
+      <li class="dropdown">
+        <a href="#" onclick="return false;" class="nav-link">More</a>
+        <ul class="dropdown-menu">
+          <li><a href="./contact.html"  class="dropdown-link">Contact</a></li>
+          <li><a href="./aboutus.html"  class="dropdown-link">About</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+<script>
+  // Dropdown toggle with viewport adjustment
+  document.querySelectorAll('nav li').forEach(function(li) {
+    li.addEventListener('mouseenter', function() {
+      var dropdown = li.querySelector('ul');
+      if (dropdown) {
+        dropdown.style.display = 'block';
+        dropdown.style.left = '0';
+        dropdown.style.right = 'auto';
+        // Adjust position if cropped by the right edge
+        var rect = dropdown.getBoundingClientRect();
+        if (rect.right > window.innerWidth) {
+          dropdown.style.left = 'auto';
+          dropdown.style.right = '0';
+        }
+        // Adjust position if cropped by the left edge
+        if (rect.left < 0) {
+          dropdown.style.left = '0';
+          dropdown.style.right = 'auto';
+        }
+      }
+    });
+    li.addEventListener('mouseleave', function() {
+      var dropdown = li.querySelector('ul');
+      if (dropdown) dropdown.style.display = 'none';
+    });
+  });
+</script>
+    <style>
+      header {
+        background-color: #217a5d;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+        margin: 10px auto;
+        width: 60%;
+      }
+    
+      header .title h1 {
+        margin: 0;
+        color: #fff;
+        font-family: 'Times New Roman', Times, serif
+      }
+    
+      .research-post {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 16px;
+        background-color: #f1e5e5;
+        margin: auto;
+        max-width: 90%;
+        padding: 25px;
+        border-radius: 10px;
+      }
+    
+      .research-post.reverse {
+        flex-direction: row-reverse;
+        margin: 10px auto;
+        padding: 25px;
+      }
+    
+      .content {
+        flex: 1;
+        margin-right: 10px;
+      }
+    
+      .research-post.reverse .content {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    
+      .content h2 {
+        margin: 0;
+        color: #000;
+        font-family: 'Arial Black', Gadget, sans-serif; 
+      }
+    
+      .content p {
+        text-align: justify;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 23px;
+      }
+    
+      .research-pic {
+        flex: 1.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .research-pic img {
+        max-width: 70%;
+        border-radius: 10px;
+      }
+    </style>
+    <br></br>
+ <header>
+        <div class="title">
+            <h1>Home Page</h1>
+        </div>
+    </header>
+<article class="research-post">
+  <div class="content">
+    <h2>Home Page Reference</h2>
+    <p>
+      We loved the simplicity of the AliExpress Home page. The products are displayed in a grid format with high-quality
+      images, making it easy for users to browse through various items.  The navigation bar is straightforward,
+      providing quick access to different categories and deals. The colour scheme is also simple. The page itself is very straightforward.
+    </p>
+    </div>
+  <div class="research-pic">
+    <img src="../images/HomeRef.png" alt="AliExpress">
+  </div>
+</article>
+<br>
+<article class="research-post reverse">
+  <div class="content">
+    <h2>Final Product: Eco Mart's Home Page</h2>
+    <p>
+      Our home page took inspiration from AliExpress' simplicity. We integrated a clean layout of products in a grid pattern. A video was added by us to further improve upon our reference.
+      We also used images and discounted pricings to attract customers. The navigation bar is also based on AliExpress' simple navigation bar.
+    </p>
+  </div>
+  <div class="research-pic">
+    <img src="../images/eco.jpg" alt="Home Page of Eco Mart">
+  </div>
+</article>
+<br><br>
+<header>
+        <div class="title">
+            <h1>Product Page</h1>
+        </div>
+    </header>
+<article class="research-post">
+  <div class="content">
+    <h2>Product Page Reference</h2>
+    <p>
+      The AliExpress product page was further used as the inspiration for our product page. We loved their compact grid layout of products,
+      which also allowed users to see the discount and products at a glance. 
+    </p>
+    </div>
+  <div class="research-pic">
+    <img src="../images/ProductRef.png" alt="AliExpress Product Page">
+  </div>
+</article>
+<br>
+<article class="research-post reverse">
+  <div class="content">
+    <h2>Final Product: Eco Mart's Product Page</h2>
+    <p>
+      Our product page was heavily inspired by AliExpress' product page. We used a similar grid layout to showcase our products.
+      Our product page also includes high-quality images, and discounted prices. We tried to improve on it by providing a buy now button on the product containers to make it more user friendly.
+    </p>
+  </div>
+  <div class="research-pic">
+    <img src="../images/eco.jpg" alt="Product Page of Eco Mart">
+  </div>
+</article>
+<br><br>
+<header>
+        <div class="title">
+            <h1>Blog Page</h1>
+        </div>
+    </header>
+<article class="research-post">
+  <div class="content">
+    <h2>Blog Page Reference</h2>
+    <p>
+      For our blog page, we took inspiration from Business Insider's blog page. We loved how simple their blog conainers were. The also properly highlighted each blog with a high quality image.
+      Further more, the font used was also very good. We wanted to integrate a similar layout for our blog page, that consisted of rows of blogs like in their page.
+    </p>
+    </div>
+  <div class="research-pic">
+    <img src="../images/BlogRef.png" alt="Buisness Insider Blog Page">
+  </div>
+</article>
+<br>
+<article class="research-post reverse">
+  <div class="content">
+    <h2>Final Product: Eco Mart's Blog Page</h2>
+    <p>
+      Our blog page was heavily inspired by Business Insider's blog page. We used a similar layout with rows of blog containers, each with a clear image and good font.
+      We tried to improve on it by increasing the font size for better readability and adding more spacing between the containers. We also tried to give the viewers an idea what our blog page was about by using a blue header with a clear title.
+      The image shows a small section of our blog page.
+    </p>
+  </div>
+  <div class="research-pic">
+    <img src="../images/BlogFinal.png" alt="Blog Page of Eco Mart">
+  </div>
+</article>
+<br><br>
+<header>
+        <div class="title">
+            <h1>Contact Us Page</h1>
+        </div>
+    </header>
+<article class="research-post">
+  <div class="content">
+    <h2>Contact Us Page Reference</h2>
+    <p>
+      The Contact Us page was inspired by a blog post from a blog site called JetFormBuilder. Their layout was what caught our eye and the attractiveness of the page.
+      The form was simple yet effective, with clear labels and input fields. The use of a separate space for contact information also made this very user friendly.
+    </p>
+    </div>
+  <div class="research-pic">
+    <img src="../images/ContactRef.png" alt="JetFormBuilder Contact Us Page">
+  </div>
+</article>
+<br>
+<article class="research-post reverse">
+  <div class="content">
+    <h2>Final Product: Eco Mart's Contact Us Page</h2>
+    <p>
+      Since our contact page was already heavily inspired by JetFormBuilder's contact page, we tried to improve upon it by using a cleaner font and adding more spacing between the form fields.
+      We also made the contact information section more simpler by adding a small container for each.
+      Two social media links were also added for better connectivity with our users.
+    </p>
+  </div>
+  <div class="research-pic">
+    <img src="../images/ContactFinal.png" alt="Contact Us Page of Eco Mart">
+  </div>
+</article>
+<br><br>
+<header>
+        <div class="title">
+            <h1>About Us Page</h1>
+        </div>
+    </header>
+<article class="research-post">
+  <div class="content">
+    <h2>About Us Page Reference</h2>
+    <p>
+      For our About Us page, we took inspiration from a website called Katiz Marketing. We loved their grid layout of team members, and also an image for each.
+      The font that they used was also very good. We thought their layout was very clean and user friendly.
+    </p>
+    </div>
+  <div class="research-pic">
+    <img src="../images/AboutRef.png" alt="Katiz Marketing About Us Page">
+  </div>
+</article>
+<br>
+<article class="research-post reverse">
+  <div class="content">
+    <h2>Final Product: Eco Mart's About Us Page</h2>
+    <p>
+     For our about us page, we used a similar grid layout to showcase our team members.
+      Each team member has a high-quality image and a brief description. We tried to improve on it by adding a header section that clearly states our mission and vision.
+      By clicking on a team card, we can get info about them and also a link to their CV.
+    </p>
+  </div>
+  <div class="research-pic">
+    <img src="../images/AboutFinal.png" alt="About Us Page of Eco Mart">
+  </div>
+</article>
+<footer class="footer">
+  <!-- Google Map (Leftmost) -->
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.047187704176!2d85.32414031506134!3d27.70903198279159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f7e7c7e6d%3A0x7e1b7e736d9193c2!2sKamalpokhari%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1680000000000!5m2!1sen!2snp"
+      width="100%" height="150" class="footer-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <!-- Contact Info (Right to Map) -->
+  <div class="footer-contact">
+    <h3>Contact Us</h3>
+    <p>Email: eco@mart.com.np</p>
+    <p>Phone: 01-4XXXXXX</p>
+    <p>Address: Kamalpokhari, Kathmandu</p>
+  </div>
+  <!-- Useful Links (Right to Contact) -->
+  <div class="footer-links">
+    <h3>Useful Links</h3>
+    <ul>
+      <li><a href="./aboutus.html" class="footer-link">About Us</a></li>
+      <li><a href="./contact.html" class="footer-link">Contact</a></li>
+      <li><a href="./blog.html" class="footer-link">Blog</a></li>
+    </ul>
+  </div>
+  <!-- Logo and Caption (Rightmost) -->
+  <div class="footer-logo">
+    <a href="../index.html" class="footer-logo-link">
+      <img src="../images/logo-nobackground.png" alt="Logo" class="footer-logo-img">
+      <span class="footer-caption">Shop Green. Live Clean</span>
+    </a>
+  </div>
+</footer>
+</body>
+</html>
