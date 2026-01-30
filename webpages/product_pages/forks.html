@@ -9,6 +9,7 @@
     
  <link rel="icon" type="image/png" href="../../images/slogo.png">
 
+<script src="../../scripts/product-counter.js"></script> <!-- External JS for counter -->
   </head>
 <body>
 <nav class="navbar">
@@ -32,15 +33,23 @@
 
     <div class="product-container">
         <div class="product-image">
-            <img src="../../images/chopsticks.jpg" alt="Chopsticks">
+            <img src="../../images/forks.jpg" alt="Forks">
         </div>
         <div class="product-details">
-            <div class="product-title">Chopsticks</div>
-            <div class="product-price">Npr 251</div>
+            <div class="product-title">Forks</div>
+            <div class="product-price">Npr 500</div>
             <div class="product-description">
                 <p>High-quality wooden chopsticks, perfect for enjoying your favorite Asian dishes at home.</p>
             </div>
-            <a href="checkout.html?product=chopsticks" class="buy-now-btn">Buy Now</a>
+            <div style="display: flex; align-items: center;">
+              <!-- Counter to the left of Buy Now button -->
+              <div class="counter-container">
+                <button class="counter-btn" onclick="decrementCounter(this)">-</button>
+                <span class="counter-value">1</span>
+                <button class="counter-btn" onclick="incrementCounter(this)">+</button>
+              </div>
+              <a href="checkout.html?product=forks" class="buy-now-btn" style="margin-left: 10px;">Buy Now</a>
+            </div>
         </div>
     </div>
     <footer class="footer">
